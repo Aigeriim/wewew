@@ -1,0 +1,73 @@
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
+
+# Open the calculator website using Selenium
+driver = webdriver.Chrome()
+driver.get("https://www.calculator.net/")
+# Find the input fields and buttons on the calculator
+num_1 = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[2]/span[2]').click()
+time.sleep(1)
+plus = driver.find_element(By.XPATH, '//*[@id="sciout"]/tbody/tr[2]/td[2]/div/div[1]/span[4]').click()
+time.sleep(1)
+num_2 = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[1]/span[3]').click()
+time.sleep(1)
+result = driver.find_element(By.XPATH,'//*[@id="sciout"]/tbody/tr[2]/td[2]/div/div[5]/span[4]').click()
+time.sleep(1)
+reset = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[5]/span[3]').click()
+time.sleep(1)
+num_3 = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[2]/span[2]').click()
+time.sleep(1)
+minus = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[2]/span[4]').click()
+time.sleep(1)
+num_4 = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[2]/span[2]').click()
+time.sleep(1)
+result = driver.find_element(By.XPATH,'//*[@id="sciout"]/tbody/tr[2]/td[2]/div/div[5]/span[4]').click()
+time.sleep(1)
+reset = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[5]/span[3]').click()
+time.sleep(1)
+num_5 = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[1]/span[1]').click()
+time.sleep(1)
+multiply = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[3]/span[4]').click()
+time.sleep(1)
+num_6 = driver.find_element(By.XPATH, '/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[1]/span[3]').click()
+time.sleep(1)
+result = driver.find_element(By.XPATH,'//*[@id="sciout"]/tbody/tr[2]/td[2]/div/div[5]/span[4]').click()
+time.sleep(1)
+reset = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[5]/span[3]').click()
+time.sleep(1)
+num_7 = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[2]/span[3]').click()
+time.sleep(1)
+division = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[4]/span[4]').click()
+time.sleep(1)
+num_8 = driver.find_element(By.XPATH,'/html/body/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/div/div[3]/span[3]').click()
+time.sleep(1)
+result = driver.find_element(By.XPATH,'//*[@id="sciout"]/tbody/tr[2]/td[2]/div/div[5]/span[4]')
+driver.implicitly_wait(5)
+
+
+actions = ActionChains(driver)
+actions.click(num_1)
+actions.click(plus)
+actions.click(num_2)
+actions.click(result)
+actions.click(reset)
+
+actions.click(num_3)
+actions.click(minus)
+actions.click(num_4)
+actions.click(result)
+actions.click(reset)
+
+actions.click(num_5)
+actions.click(multiply)
+actions.click(num_6)
+actions.click(result)
+actions.click(reset)
+
+actions.click(num_7)
+actions.click(division)
+actions.click(num_8)
+actions.click(result)
